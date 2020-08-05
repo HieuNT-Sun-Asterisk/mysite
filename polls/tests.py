@@ -38,7 +38,7 @@ def create_question(question_text, days):
 
 
 class QuestionIndexViewTests(TestCase):
-    def test_no_questions(self):
+    def heiu_test_no_questions(self):
         """
         If no questions exist, an appropriate message is displayed.
         """
@@ -95,9 +95,6 @@ class QuestionIndexViewTests(TestCase):
         )
 
 
-
-
-
 class QuestionDetailViewTests(TestCase):
     def test_future_question(self):
         """
@@ -118,3 +115,4 @@ class QuestionDetailViewTests(TestCase):
         url = reverse('polls:detail', args=(past_question.id,))
         response = self.client.get(url)
         self.assertContains(response, past_question.question_text)
+
